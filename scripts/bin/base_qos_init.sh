@@ -13,10 +13,10 @@
 # See the Apache Version 2.0 License for specific language governing
 # permissions and limitations under the License.
 
-export PYTHONPATH=/usr/lib/opx:/usr/lib/x86_64-linux-gnu/opx
+export PYTHONPATH=$OPX_INSTALL_PATH/usr/lib/opx:$OPX_INSTALL_PATH/usr/lib/x86_64-linux-gnu/opx
 
-if [ -f /etc/opx/base_qos_no_init ] ; then
+if [ -f $OPX_INSTALL_PATH/etc/opx/base_qos_no_init ] ; then
    exit 0
 fi
-/usr/bin/python /usr/bin/base_qos_init.py
+$OPX_INSTALL_PATH/usr/bin/python $OPX_INSTALL_PATH/usr/bin/base_qos_init.py
 
